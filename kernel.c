@@ -15,7 +15,7 @@
 /* Hardware text mode color constants. */
 enum vga_color {
 	VGA_COLOR_BLACK = 0,
-	VGA_COLOR_BLUE = 1,
+  VGA_COLOR_BLUE = 1,
 	VGA_COLOR_GREEN = 2,
 	VGA_COLOR_CYAN = 3,
 	VGA_COLOR_RED = 4,
@@ -114,7 +114,7 @@ void kernel_main(void)
 {
 	/* Initialize terminal interface */
 	terminal_initialize();
-
+  terminal_color = VGA_COLOR_RED;
 	/* Newline support is left as an exercise. */
 	terminal_writestring("Hello, kernel World!\n");
 	terminal_writestring("Hello, kernel World!\n");
