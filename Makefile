@@ -46,12 +46,12 @@ $(BIN): $(BOOT_OBJ) $(KERNEL_OBJ)
 
 # Nettoyage
 clean:
-	rm -rf dist/*.o isodir/* myos.iso
+	rm -rf dist isodir $(IMG)
 
 re: clean all
 
 run: all
-	qemu-system-i386 -cdrom myos.iso
+	qemu-system-i386 -cdrom $(IMG)
 
 rerun: clean all run
 
