@@ -1,5 +1,15 @@
+### Introduction
+
+Small project about making an os from scratch
+
+
+### Dependencies
+
+You need yo make a cross-compiler using the following :
+
 gcc version :
 
+```
 Using built-in specs.
 COLLECT_GCC=i686-elf-gcc
 COLLECT_LTO_WRAPPER=/home/matthieu/opt/cross/libexec/gcc/i686-elf/13.3.0/lto-wrapper
@@ -8,13 +18,14 @@ Configured with: ../gcc-13.3.0/configure --target=i686-elf --prefix=/home/matthi
 Thread model: single
 Supported LTO compression algorithms: zlib zstd
 gcc version 13.3.0 (GCC) 
-
+```
 
 ld/binutils version :
-
+```
 GNU ld (GNU Binutils) 2.42
+```
 
+### Run
 
-use makefile (make command) to build kernel and make iso image
+use makefile (`make`) to build kernel and make iso image or `make run` to run directly into qemu
 
-qemu test boot command : qemu-system-i386 -cdrom myos.iso
