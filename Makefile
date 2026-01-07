@@ -22,6 +22,7 @@ LDFLAGS = -T $(LINKER) -ffreestanding -O2 -nostdlib
 LIBS    = -lgcc
 
 # Règle par défaut
+
 all: $(IMG)
 
 $(IMG): $(BIN)
@@ -48,4 +49,9 @@ clean:
 	rm -rf dist/*.o isodir/* myos.iso
 
 re: clean all
+
+run: all
+	qemu-system-i386 -cdrom myos.iso
+
+rerun: clean all run
 
